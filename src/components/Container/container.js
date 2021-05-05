@@ -50,13 +50,13 @@ class Container extends Component {
       this.setState({
         profileList: this.state.randomUser.filter((profile) => {
           return (
-            profile.picture.medium ||
+            profile.picture.medium,
             profile.name.first
               .toLowerCase()
               .concat(" ", profile.name.last.toLowerCase())
-              .includes(input) ||
-            profile.email.includes(input) ||
-            profile.dob.age.includes(input) ||
+              .includes(input),
+            profile.email.includes(input),
+            profile.dob.age.includes(input),
             profile.location.city.includes(input)
           );
         }),
