@@ -1,5 +1,4 @@
 import React, { Component }from "react";
-import NavBar from "../NavBar/nav";
 import Search from "../Search/search";
 import Profile from "../Profile/profile";
 import API from "../../routes/api";
@@ -15,7 +14,7 @@ class Container extends Component {
   componentDidMount() {
     API.getRandomUser()
       .then((res) => {
-        console.log(res);
+        console.log(res.data)
         this.setState({
           randomUser: res.data.results,
           profileList: res.data.results
@@ -36,21 +35,41 @@ class Container extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    API.getRandomUser(this.state.search)
-    .then((res) => {
+    // API.getRandomUser(this.state.search)
+    // .then((res) => {
+    //   this.setState({
+    //     randomUser: res.data.results,
+    //     profileList: res.data.results,
+    //   });
+    // })
+    // .catch((err) => this.setState({ error: err.results }))
+  };
+
+  profileList = (input) => {
+    if (input) {
       this.setState({
-        randomUser: res.data.results,
-        profileList: res.data.results,
+        profileList: this.state.randomUser.filter((profile) => {
+          return (
+            profile.picture.medium ||
+            profile.name.first
+              .toLowerCase()
+              .concat(" ", profile.name.last.toLowerCase())
+              .includes(input) ||
+            profile.email.includes(input) ||
+            profile.dob.age.includes(input) ||
+            profile.location.city.includes(input)
+          );
+        }),
       });
-    })
-    .catch((err) => this.setState({ error: err.results }))
+    } else {
+      this.setState({ profileList: this.state.randomUser });
+    }
   };
 
   render() {
+    console.log(this.state)
     return (
           <div className="container">
-            <NavBar
-            />
               <Search
                 value={this.state.search}
                 handleInputChange={this.handleInputChange}
@@ -58,6 +77,8 @@ class Container extends Component {
               />
               <Profile
               state={this.state}
+              profileList = {this.state.profileList}
+              randomUser = {this.state.randomUser}
               />
           </div>
     );
