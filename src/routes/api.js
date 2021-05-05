@@ -1,7 +1,9 @@
 import axios from "axios";
 
-export default{
+const API = {
   getRandomUser: function() {
-    return axios.get("https://randomuser.me/api/?results=500&nat=au");
-  }
+    return axios.get("https://randomuser.me/api/?results=50&nat=au");
+  },
 };
+
+export default API;
