@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/employee-tracker/static/js/main.66482eb6.chunk.js",
-    "main.js.map": "/employee-tracker/static/js/main.66482eb6.chunk.js.map",
-    "runtime-main.js": "/employee-tracker/static/js/runtime-main.0706a25d.js",
-    "runtime-main.js.map": "/employee-tracker/static/js/runtime-main.0706a25d.js.map",
-    "static/css/2.4c97ca4f.chunk.css": "/employee-tracker/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.b71a3f89.chunk.js": "/employee-tracker/static/js/2.b71a3f89.chunk.js",
-    "static/js/2.b71a3f89.chunk.js.map": "/employee-tracker/static/js/2.b71a3f89.chunk.js.map",
-    "index.html": "/employee-tracker/index.html",
-    "static/css/2.4c97ca4f.chunk.css.map": "/employee-tracker/static/css/2.4c97ca4f.chunk.css.map",
-    "static/js/2.b71a3f89.chunk.js.LICENSE.txt": "/employee-tracker/static/js/2.b71a3f89.chunk.js.LICENSE.txt"
+    "main.js": "/employee-directory.git/static/js/main.66482eb6.chunk.js",
+    "main.js.map": "/employee-directory.git/static/js/main.66482eb6.chunk.js.map",
+    "runtime-main.js": "/employee-directory.git/static/js/runtime-main.2e8cca05.js",
+    "runtime-main.js.map": "/employee-directory.git/static/js/runtime-main.2e8cca05.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/employee-directory.git/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.b71a3f89.chunk.js": "/employee-directory.git/static/js/2.b71a3f89.chunk.js",
+    "static/js/2.b71a3f89.chunk.js.map": "/employee-directory.git/static/js/2.b71a3f89.chunk.js.map",
+    "index.html": "/employee-directory.git/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/employee-directory.git/static/css/2.4c97ca4f.chunk.css.map",
+    "static/js/2.b71a3f89.chunk.js.LICENSE.txt": "/employee-directory.git/static/js/2.b71a3f89.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0706a25d.js",
+    "static/js/runtime-main.2e8cca05.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.b71a3f89.chunk.js",
     "static/js/main.66482eb6.chunk.js"
