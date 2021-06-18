@@ -1,30 +1,24 @@
-import React from 'react';
+import React from "react";
 
-function Search(props) {
+
+const Search = (props) => {
+  // Setting the component's initial state
+
   return (
-    <form>
-      <div className="form-group" style={{ display: 'flex' }}>
-        <label htmlFor="search"></label>
+    <nav className="navbar navbar-dark bg-light justify-content-center">
+      <form className="form-inline m-8" onSubmit={props.handleFormSubmit}>
         <input
-          onChange={props.handleInputChange}
+          className="form-control"
           value={props.value}
           name="search"
-          type="text"
-          className="form-control"
-          placeholder="Search Profile"
-          id="search"
+          onChange={props.handleInputChange}
+          type="search"
+          placeholder="Search for an employee"
         />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary">
-          Search
-        </button>
-        <button onClick={props.refreshPage} className="btn btn-primary ml-1">
-          Reset
-        </button>
-        {/* <br /> */}
-      </div>
-    </form>
+      </form>
+    </nav>
   );
-}
+};
 
 export default Search;
 
